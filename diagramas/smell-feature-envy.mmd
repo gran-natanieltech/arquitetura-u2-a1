@@ -1,0 +1,16 @@
+classDiagram
+    class PedidoAntes {
+        +total()
+    }
+    class ItemAntes {
+        preco
+        quantidade
+    }
+    class PedidoDepois {
+        +total()
+    }
+    class ItemPedido {
+        +subtotal()
+    }
+    PedidoAntes ..> ItemAntes : consulta detalhes
+    PedidoDepois ..> ItemPedido : soma subtotais

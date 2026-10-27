@@ -1,0 +1,21 @@
+classDiagram
+    class Trabalhador {
+        <<interface>>
+        +trabalhar()
+        +comer()
+        +dormir()
+    }
+    class Trabalhavel {
+        <<interface>>
+        +trabalhar()
+    }
+    class Alimentavel {
+        <<interface>>
+        +comer()
+    }
+    class Robo
+    class Humano
+    Trabalhavel <|.. Robo
+    Trabalhavel <|.. Humano
+    Alimentavel <|.. Humano
+    note for Trabalhador "O robô seria forçado a implementar<br/>métodos que não fazem sentido"
