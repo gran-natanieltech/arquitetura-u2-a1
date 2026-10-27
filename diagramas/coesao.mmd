@@ -1,0 +1,12 @@
+flowchart LR
+    subgraph Ruim["Alto acoplamento · baixa coesão"]
+        G["GerenciadorDePedidos<br/>valida CPF + formata e-mail + calcula frete"]
+        G --> A[Módulo A]
+        G --> B[Módulo B]
+        A <--> B
+    end
+    subgraph Bom["Baixo acoplamento · alta coesão"]
+        P[PedidoService] --> V[ValidadorCpf]
+        P --> F[CalculadoraFrete]
+        P --> E[FormatadorEmail]
+    end

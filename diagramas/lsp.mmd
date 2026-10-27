@@ -1,0 +1,12 @@
+classDiagram
+    class Retangulo {
+        +setLargura(l)
+        +setAltura(a)
+        +area() double
+    }
+    class Quadrado {
+        +setLargura(l)
+        +setAltura(a)
+    }
+    Retangulo <|-- Quadrado
+    note for Quadrado "Força largura = altura:<br/>quebra a expectativa da superclasse"

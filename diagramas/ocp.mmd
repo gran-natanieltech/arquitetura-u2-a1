@@ -1,0 +1,12 @@
+classDiagram
+    class Desconto {
+        <<interface>>
+        +aplicar(valor) double
+    }
+    class DescontoNatal
+    class DescontoBlackFriday
+    class DescontoNovoCliente
+    Desconto <|.. DescontoNatal
+    Desconto <|.. DescontoBlackFriday
+    Desconto <|.. DescontoNovoCliente
+    note for Desconto "Novo tipo = nova classe,<br/>sem alterar as existentes"
